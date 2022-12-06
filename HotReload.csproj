@@ -1,12 +1,24 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net472</TargetFramework>
 		<LangVersion>preview</LangVersion>
 	</PropertyGroup>
 
+	<PropertyGroup>
+		<PackageId>Mono.HotReload</PackageId>
+		<Version>1.0.0.0</Version>
+		<Authors>Sl4vP0weR</Authors>
+		<Owners>Sl4vP0weR</Owners>
+		<Description>Mono HotReload experience.</Description>
+		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+		<RepositoryUrl>https://github.com/Sl4vP0weR/HotReload.git</RepositoryUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	</PropertyGroup>
+
 	<ItemGroup>
-	  <PackageReference Include="dnlib-new" Version="2.1.0" />
+		<PackageReference Include="dnlib-new" Version="2.1.0" />
 		<PackageReference Include="Lib.Harmony" Version="2.2.2" />
 	</ItemGroup>
 
