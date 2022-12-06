@@ -1,0 +1,16 @@
+﻿global using dnlib.DotNet.Writer;
+global using dnlib.DotNet.MD;
+global using dnlib.DotNet;
+global using System;
+global using System.Collections;
+global using System.Collections.Generic;
+global using System.Diagnostics;
+global using System.IO;
+global using System.Reflection;
+global using System.Runtime.InteropServices;
+global using System.Text.RegularExpressions;
+global using System.Linq;
+global using System.Threading.Tasks;
+global using System.Security.Policy;
+global using System.Threading;
+global using System.Xml.Linq;
