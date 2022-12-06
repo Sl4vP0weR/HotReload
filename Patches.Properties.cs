@@ -13,7 +13,7 @@ partial class Patches
             if (realName is not null)
                 name = realName;
         }
-        [HarmonyPatch(typeof(System.Reflection.Assembly), nameof(get_CodeBase), new Type[0])]
+        [HarmonyPatch(typeof(RuntimeAssembly), nameof(get_CodeBase), new Type[0])]
         [HarmonyPrefix]
         public static void get_CodeBase(System.Reflection.Assembly __instance, ref string __result) => GetCodeBase(__instance, ref __result);
         public static void GetCodeBase(System.Reflection.Assembly assembly, ref string codeBase)
