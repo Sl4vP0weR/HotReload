@@ -3,11 +3,13 @@
 	<PropertyGroup>
 		<TargetFramework>net472</TargetFramework>
 		<LangVersion>preview</LangVersion>
+		<Version>1.0.0</Version>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<PackageId>Mono.HotReload</PackageId>
-		<Version>1.0.0.0</Version>
+		<PackageId>Sl4vP0weR.HotReload</PackageId>
+		<Version>$(Version)+$([System.Guid]::NewGuid().ToString().Replace("-", ""))</Version>
 		<Authors>Sl4vP0weR</Authors>
 		<Owners>Sl4vP0weR</Owners>
 		<Description>Mono HotReload experience.</Description>
@@ -18,12 +20,23 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Tests\**" />
+	  <EmbeddedResource Remove="Tests\**" />
+	  <None Remove="Tests\**" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="dnlib-new" Version="2.1.0" />
 		<PackageReference Include="Lib.Harmony" Version="2.2.2" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<Using Include="HarmonyLib" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Publicize Include="mscorlib" />
+		<PackageReference Include="Krafs.Publicizer" Version="*" />
 	</ItemGroup>
 
 </Project>
